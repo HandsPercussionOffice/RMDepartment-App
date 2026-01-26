@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Registration App</title>
+
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" type="image/png" href="icon.png"> 
+    
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: -apple-system, system-ui;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 22%;
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 28px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            background-color: #007aff; /* iOS blue */
+            color: white;
+            cursor: pointer;
+        }
+
+        button:active {
+            background-color: #005ecb;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="icon.png" alt="Show Registration App">
+    <div style="color:#888;">Welcome</div>
+
+    <button onclick="openApp()">Enter App</button>
+
+    <script>
+        function openApp() {
+            window.location.replace("https://script.google.com/macros/s/AKfycbzZC8MixJkZ53roxJuVdcoZXgBHqlIFLzvHymqqGyRMLXghSn51ewjy1Wig58HRjc_x/exec");
+        }
+    </script>
+</body>
+</html>
