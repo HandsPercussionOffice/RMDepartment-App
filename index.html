@@ -50,12 +50,30 @@
     <img src="icon.png" alt="Show Registration App">
     <div style="color:#888;">Welcome</div>
 
-    <!-- <button onclick="openApp()">Enter App</button> -->
+    <div id="countdown" style="color:#888;">
+        Opening app in 5…
+    </div>
 
     <script>
         // function openApp() {
-            window.location.replace("https://script.google.com/macros/s/AKfycbzn6roRW73rtp3I1-g_aF9DbXsliRCZVeHV0I2GLihJGDH4tnRcSbCj3KUZeysl6WsANA/exec");
+            // window.location.replace("https://script.google.com/macros/s/AKfycbzn6roRW73rtp3I1-g_aF9DbXsliRCZVeHV0I2GLihJGDH4tnRcSbCj3KUZeysl6WsANA/exec");
         // }
+        document.addEventListener("DOMContentLoaded", () => {
+            let seconds = 5;
+            const label = document.getElementById("countdown");
+        
+            const timer = setInterval(() => {
+                seconds--;
+                label.textContent = "Opening app in " + seconds + "…";
+        
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    window.location.replace(
+                        "https://script.google.com/macros/s/AKfycbzZC8MixJkZ53roxJuVdcoZXgBHqlIFLzvHymqqGyRMLXghSn51ewjy1Wig58HRjc_x/exec"
+                    );
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>
