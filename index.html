@@ -62,17 +62,22 @@
             let seconds = 5;
             const label = document.getElementById("countdown");
         
-            const timer = setInterval(() => {
+            const timer = setTimeout(() => {
                 seconds--;
                 label.textContent = "Opening app in " + seconds + "…";
         
                 if (seconds <= 0) {
-                    clearInterval(timer);
+                    //clearTimeout(timer);
                     window.location.replace(
                         "https://script.google.com/macros/s/AKfycbzZC8MixJkZ53roxJuVdcoZXgBHqlIFLzvHymqqGyRMLXghSn51ewjy1Wig58HRjc_x/exec"
                     );
                 }
-            }, 1000);
+            }, 5000);
+            // setTimeout(() => {
+            //     window.location.replace(
+            //         "https://script.google.com/macros/s/AKfycbzZC8MixJkZ53roxJuVdcoZXgBHqlIFLzvHymqqGyRMLXghSn51ewjy1Wig58HRjc_x/exec"
+            //     );
+            // }, 5000);
         });
     </script>
 </body>
